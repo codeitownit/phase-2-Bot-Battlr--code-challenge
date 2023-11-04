@@ -7,6 +7,7 @@ import BotArmy from './BotArmy';
 function App() {
   const baseUrl = "http://localhost:3000/bots";
   const[bots, setBots]=useState([]);
+  const[botArmy, setBotArmy] = useState([])
 
   useEffect(() =>{
     fetch(baseUrl)
@@ -16,8 +17,8 @@ function App() {
 
   return (
     <div className="App">
-      <BotArmy />
-      <BotContainer bots={bots}/>
+      <BotArmy botArmy={botArmy}/>
+      <BotContainer bots={bots} botArmy={botArmy} setBotArmy={setBotArmy}/>
     </div>
   );
 }
