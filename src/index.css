@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.bot-army{
+  text-align: center;
+  padding: 20%;
+  background-color: #b7d607;
+  margin-bottom: 20px;
+}
