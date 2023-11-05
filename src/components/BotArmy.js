@@ -11,7 +11,7 @@ function BotArmy({botArmy, setBotArmy, deleteBot}) {
 
 let updated;
 function dischargeBot(bot) {
-  setBotArmy(updated=botArmy.filter((b) => b.id === bot.id ? updated : bot));
+  setBotArmy(updated=botArmy.filter((armyBot) => armyBot.id === bot.id ? updated : bot));
 }
 
   return (
