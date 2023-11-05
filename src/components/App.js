@@ -9,15 +9,30 @@ function App() {
   const[bots, setBots]=useState([]);
   const[botArmy, setBotArmy] = useState([])
 
+
   useEffect(() =>{
     fetch(baseUrl)
     .then((response) =>response.json())
     .then((data) =>setBots(data))
   },[])
 
+  function deleteBot(id) {
+    console.log(id)
+    fetch(`${baseUrl}/${id}`,
+    {
+      method: 'DELETE',
+    })
+    .then((response) =>response.json())
+    .then(() =>{
+    const updateBots = bots.filter((bot)=>bot.id !== id)
+    setBots(updateBots)
+  })
+  }
+  
+
   return (
     <div className="App">
-      <BotArmy botArmy={botArmy}/>
+      <BotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>
       <BotContainer bots={bots} botArmy={botArmy} setBotArmy={setBotArmy}/>
     </div>
   );

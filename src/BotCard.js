@@ -4,19 +4,14 @@ import Card from 'react-bootstrap/Card';
 
 
 function BotCard({bot, botArmy, setBotArmy}) {
-   
-    const checkEnlisted = botArmy.find((armyBot) => armyBot.id === bot.id);
+
+  let checkEnlisted;
+  checkEnlisted = botArmy.find((armyBot) => armyBot.id === bot.id);
     
-        function enlistBot() {
-            if(checkEnlisted){
-                const updateBotArmy = botArmy.filter((armyBot)=> armyBot.id !== bot.id)
-                setBotArmy(updateBotArmy)
-            }else{
-                const updateBotArmy = [...botArmy, bot]
-                setBotArmy(updateBotArmy)
-            }
-            
-        }
+  function enlistBot() {
+    setBotArmy (checkEnlisted ? botArmy.filter((armyBot)=> armyBot.id !== bot.id): [...botArmy, bot])
+
+      }
 console.log(botArmy)
 
   return (
@@ -29,8 +24,11 @@ console.log(botArmy)
                 {bot.catchphrase}
               </Card.Text>
             </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+            <Card.Footer className='card-footer'>
+            <small className="text-muted"><i class="fa-solid fa-heart-pulse"></i> {bot.health}</small>
+            <small className="text-muted"><i class="fa-solid fa-bolt"></i> {bot.damage}</small>
+            <small className="text-muted"><i class="fa-solid fa-shield-halved"></i> {bot.armor}</small>
+            {/* <small className="text-muted"><i class="fa-solid fa-xmark" style={{color:'#f20707'}}></i></small> */}
             </Card.Footer>
             </Card>
         </Col>
