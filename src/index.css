@@ -28,3 +28,7 @@ code {
   display:flex;
   justify-content: space-around;
 }
+img{
+  background-color: antiquewhite;
+  border-radius: 20%;
+}

@@ -1,7 +1,7 @@
 // import './App.css';
 import React, {useState, useEffect} from 'react';
 import BotContainer from './BotContainer';
-import BotArmy from './BotArmy';
+import YourBotArmy from './YourBotArmy';
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <BotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>
+      <YourBotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>
       <BotContainer bots={bots} botArmy={botArmy} setBotArmy={setBotArmy}/>
     </div>
   );

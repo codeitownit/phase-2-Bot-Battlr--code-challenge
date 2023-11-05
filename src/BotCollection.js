@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
 
-function BotCard({bot, botArmy, setBotArmy}) {
+function BotCollection({bot, botArmy, setBotArmy}) {
 
   let checkEnlisted;
   checkEnlisted = botArmy.find((armyBot) => armyBot.id === bot.id);
@@ -34,4 +34,4 @@ function BotCard({bot, botArmy, setBotArmy}) {
   )
 }
 
-export default BotCard
+export default BotCollection

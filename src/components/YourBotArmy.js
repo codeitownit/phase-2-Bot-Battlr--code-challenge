@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
-function BotArmy({botArmy, setBotArmy, deleteBot}) {
+function YourBotArmy({botArmy, setBotArmy, deleteBot}) {
   
 
   let updated;
@@ -49,4 +49,4 @@ function BotArmy({botArmy, setBotArmy, deleteBot}) {
   )
 }
 
-export default BotArmy
+export default YourBotArmy
