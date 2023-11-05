@@ -12,26 +12,25 @@ function BotCard({bot, botArmy, setBotArmy}) {
     setBotArmy (checkEnlisted ? botArmy.filter((armyBot)=> armyBot.id !== bot.id): [...botArmy, bot])
 
       }
-console.log(botArmy)
 
   return (
-        <Col onClick={enlistBot} xs={6} md={3}>
-            <Card className="bot-card"style={{ width: '15rem', margin:'0'}}>
-            <Card.Img variant="top" src={bot.avatar_url} alt="bot" />
-            <Card.Body>
-              <Card.Title>{bot.name}</Card.Title>
-              <Card.Text>
-                {bot.catchphrase}
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer className='card-footer'>
-            <small className="text-muted"><i class="fa-solid fa-heart-pulse"></i> {bot.health}</small>
-            <small className="text-muted"><i class="fa-solid fa-bolt"></i> {bot.damage}</small>
-            <small className="text-muted"><i class="fa-solid fa-shield-halved"></i> {bot.armor}</small>
-            {/* <small className="text-muted"><i class="fa-solid fa-xmark" style={{color:'#f20707'}}></i></small> */}
-            </Card.Footer>
-            </Card>
-        </Col>
+    
+    <Col onClick={enlistBot} xs={6} md={3}>
+      <Card className="bot-card"style={{ width: '15rem', margin:'0'}}>
+        <Card.Img variant="top" src={bot.avatar_url} alt="bot" />
+        <Card.Body>
+          <Card.Title>{bot.name}</Card.Title>
+          <Card.Text>
+            {bot.catchphrase}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer className='card-footer'>
+          <small className="text-muted"><i class="fa-solid fa-heart-pulse"></i> {bot.health}</small>
+          <small className="text-muted"><i class="fa-solid fa-bolt"></i> {bot.damage}</small>
+          <small className="text-muted"><i class="fa-solid fa-shield-halved"></i> {bot.armor}</small>
+        </Card.Footer>
+      </Card>
+    </Col>
   )
 }
 
