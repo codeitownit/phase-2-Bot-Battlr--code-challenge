@@ -3,7 +3,6 @@ import BotContainer from './BotContainer';
 import YourBotArmy from './YourBotArmy';
 import BotSpecs from './BotSpecs';
 
-
 function App() {
   const baseUrl = "http://localhost:3000/bots";
   const[bots, setBots]=useState([]);
@@ -11,12 +10,12 @@ function App() {
   const[botArmy, setBotArmy] = useState([])
   const[active, setActive] = useState("firstComponent");
 
-
   useEffect(() =>{
     fetch(baseUrl)
     .then((response) =>response.json())
     .then((data) =>setBots(data))
   },[])
+
 
   function deleteBot(id) {
     console.log(id)
@@ -35,6 +34,8 @@ function App() {
   return (
     
     <div className="App">
+      <nav>
+        Bot Battlr- Make your own Bot Army</nav>
       {active==="firstComponent"&&<YourBotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>}
       {active==="secondComponent"&&<YourBotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>}
      {active==="firstComponent"&& <BotContainer bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} setActive={setActive} setBot={setBot}/>}

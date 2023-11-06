@@ -17,6 +17,8 @@ function YourBotArmy({botArmy, setBotArmy, deleteBot}) {
 
   return (
     <div className='bot-army'>
+      <h1 style={{color:'#f6f6f6'}}>Your Army</h1>
+      <hr />
     <Container>
       <Row>   
         <CardGroup>

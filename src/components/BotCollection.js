@@ -13,6 +13,7 @@ function showSpecs(bot){
 }
 
   return (
+    <>
     
     <Col onClick={()=>{showSpecs(bot)}} xs={6} md={3}>
       <Card className="bot-card"style={{ width: '15rem', margin:'0'}}>
@@ -30,6 +31,7 @@ function showSpecs(bot){
         </Card.Footer>
       </Card>
     </Col>
+    </>
   )
 }
 
