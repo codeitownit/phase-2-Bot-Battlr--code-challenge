@@ -26,9 +26,15 @@ code {
 }
 .card-footer{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 img{
   background-color: antiquewhite;
   border-radius: 20%;
+}
+.bot-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
 }

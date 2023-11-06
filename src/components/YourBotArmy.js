@@ -21,7 +21,7 @@ function YourBotArmy({botArmy, setBotArmy, deleteBot}) {
       <Row>   
         <CardGroup>
           {botArmy.map((armyBot) => (
-            <Col onClick={()=>dischargeBot(armyBot)} xs={6} md={3}>
+            <Col key={armyBot.id}onClick={()=>dischargeBot(armyBot)} xs={6} md={3}>
               <Card className='bot-card-army' style={{ width: '15rem', margin:'20px'}}>
                 <Card.Img variant="top" src={armyBot.avatar_url} alt="bot" />
                 <Card.Body>
@@ -31,10 +31,10 @@ function YourBotArmy({botArmy, setBotArmy, deleteBot}) {
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                  <small className="text-muted"><i class="fa-solid fa-heart-pulse"></i> {armyBot.health}</small>
-                  <small className="text-muted"><i class="fa-solid fa-bolt"></i> {armyBot.damage}</small>
-                  <small className="text-muted"><i class="fa-solid fa-shield-halved"></i> {armyBot.armor}</small>
-                  <small className="text-muted"><button onClick={()=>deleteBot(armyBot.id)}><i class="fa-solid fa-xmark" style={{color:'#f20707'}}></i></button></small>
+                  <small className="text-muted"><i className="fa-solid fa-heart-pulse"></i> {armyBot.health}</small>
+                  <small className="text-muted"><i className="fa-solid fa-bolt"></i> {armyBot.damage}</small>
+                  <small className="text-muted"><i className="fa-solid fa-shield-halved"></i> {armyBot.armor}</small>
+                  <small className="text-muted"><button onClick={()=>deleteBot(armyBot.id)}><i className="fa-solid fa-xmark" style={{color:'#f20707'}}></i></button></small>
                 </Card.Footer>
               </Card>
             </Col>

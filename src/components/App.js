@@ -1,13 +1,15 @@
-// import './App.css';
 import React, {useState, useEffect} from 'react';
 import BotContainer from './BotContainer';
 import YourBotArmy from './YourBotArmy';
+import BotSpecs from './BotSpecs';
 
 
 function App() {
   const baseUrl = "http://localhost:3000/bots";
   const[bots, setBots]=useState([]);
+  const[bot, setBot]=useState([]);
   const[botArmy, setBotArmy] = useState([])
+  const[active, setActive] = useState("firstComponent");
 
 
   useEffect(() =>{
@@ -31,9 +33,12 @@ function App() {
   
 
   return (
+    
     <div className="App">
-      <YourBotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>
-      <BotContainer bots={bots} botArmy={botArmy} setBotArmy={setBotArmy}/>
+      {active==="firstComponent"&&<YourBotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>}
+      {active==="secondComponent"&&<YourBotArmy bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} deleteBot={deleteBot}/>}
+     {active==="firstComponent"&& <BotContainer bots={bots} botArmy={botArmy} setBotArmy={setBotArmy} setActive={setActive} setBot={setBot}/>}
+     {active==="secondComponent"&& <BotSpecs bot={bot} botArmy={botArmy} setBotArmy={setBotArmy} setActive={setActive} /> }
     </div>
   );
 }
