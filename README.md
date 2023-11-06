@@ -1,4 +1,70 @@
-# Getting Started with Create React App
+# Bot Battlr
+
+Welcome to **Bot Battlr**, the one and only spot in the known universe where you
+can custom build your own Bot Army! This is our app:
+
+# Demo
+
+![demo](https://curriculum-content.s3.amazonaws.com/phase-2/phase-2-hooks-code-challenge-bot-battlr/checkpoint_demo.gif)
+
+**Bot Battlr** is a web app where you can create your own bot army. This app displays a list of available bots 
+among other features.
+
+As a user I can:
+- See profiles of all bots rendered in `BotCollection`.
+- Add an individual bot to my army by clicking on it. The selected bot should
+  render in the `YourBotArmy` component. The bot can be enlisted only **once**.
+  The bot **does not** disappear from the `BotCollection`.
+- Release a bot from my army by clicking on it. The bot disappears from the
+  `YourBotArmy` component.
+- Discharge a bot from their service forever, by clicking the red button marked
+  "x", which would delete the bot both from the backend and from the
+  `YourBotArmy` on the frontend.
+
+## Prerequisites
+
+Before you begin, ensure that you have met the following requirements:
+
+
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+* Make sure **Npm** and [Node](https://nodejs.org/en/download "Download Node") are also installed on your operating system.
+
+## Bot Battlr Setup
+
+1. To install **Bot Battlr**, follow these steps:
+
+Linux and Mac OS:
+
+```bash
+sudo git clone https://github.com/codeitownit/phase-2-Bot-Battlr--code-challenge.git
+```
+
+Windows:
+```bash
+git clone https://github.com/codeitownit/phase-2-Bot-Battlr--code-challenge.git
+```
+
+2. Installing JSON Server:
+
+To install JSON Server in your application, navigate to your project directory in your terminal or command prompt and type in this command:
+```bash
+npm install -g json-server
+```
+This will install the JSON server globally on your system. If you want to install it locally for just a particular project instead, use this command:
+```bash
+npm i json-server
+```
+
+Run the following command to run the JSON server:
+```bash
+json-server --watch db.json
+```
+
+3. You can use the JSON file **db.json** in the project folder for your server DB.
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -69,3 +135,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # phase-2-Bot-Battlr--code-challenge
+
+
+## License
+
+This project is **free to use** and does not contains any license.
