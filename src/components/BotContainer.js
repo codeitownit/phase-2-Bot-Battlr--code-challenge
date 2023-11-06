@@ -3,7 +3,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import BotCollection from '../BotCollection';
+import BotCollection from './BotCollection';
 
 
 function BotContainer({bots, botArmy, setBotArmy}) {
