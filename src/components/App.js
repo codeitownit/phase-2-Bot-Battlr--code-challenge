@@ -4,19 +4,22 @@ import YourBotArmy from './YourBotArmy';
 import BotSpecs from './BotSpecs';
 
 function App() {
+
+  // initializing state variables 
   const baseUrl = "http://localhost:3000/bots";
   const[bots, setBots]=useState([]);
   const[bot, setBot]=useState([]);
   const[botArmy, setBotArmy] = useState([])
   const[active, setActive] = useState("firstComponent");
 
+  // fetching json data
   useEffect(() =>{
     fetch(baseUrl)
     .then((response) =>response.json())
     .then((data) =>setBots(data))
   },[])
 
-
+// function that handles delete requests 
   function deleteBot(id) {
     console.log(id)
     fetch(`${baseUrl}/${id}`,
@@ -30,7 +33,7 @@ function App() {
   })
   }
   
-
+// renders app component
   return (
     
     <div className="App">

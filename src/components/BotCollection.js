@@ -2,16 +2,16 @@ import React from 'react'
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
-
+// renders bot collection component
 function BotCollection({bot, setActive, setBot}) {
 
- 
+ // renders bot specs component when bot is selected and sets state
 function showSpecs(bot){
   console.log(bot.name)
   setActive("secondComponent")
   setBot(bot)
 }
-
+//renders bot cards to display bot collection
   return (
     <>
     
@@ -24,6 +24,7 @@ function showSpecs(bot){
             {bot.catchphrase}
           </Card.Text>
         </Card.Body>
+        {/* displays icons for health, damage and armor */}
         <Card.Footer className='card-footer'>
           <small className="text-muted"><i className="fa-solid fa-heart-pulse"></i> {bot.health}</small>
           <small className="text-muted"><i className="fa-solid fa-bolt"></i> {bot.damage}</small>

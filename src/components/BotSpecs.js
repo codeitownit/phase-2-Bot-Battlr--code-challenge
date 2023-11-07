@@ -1,7 +1,9 @@
 import React from 'react'
 
+// renders bot specs page for clicked bot
 function BotSpecs({bot, botArmy, setBotArmy, setActive}) {
 
+// enlist a bot into the bot army
     let checkEnlisted;
     checkEnlisted = botArmy.find((armyBot) => armyBot.id === bot.id);
     
@@ -29,6 +31,7 @@ function BotSpecs({bot, botArmy, setBotArmy, setActive}) {
                 <small className="text-muted"><i className="fa-solid fa-shield-halved" style={{color:'blue'}}></i> {bot.armor}</small> 
             </div>
             <br />
+            {/* buttons for event handlers for the bot specs page  */}
             <button className="btn btn-lg btn-success"onClick={()=>setActive("firstComponent")} type="">Go Back</button>
             <br />
             <br />
